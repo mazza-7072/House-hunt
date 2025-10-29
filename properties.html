@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eldoret Rentals</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f8f8;
+      color: #444;
+    }
+
+    header {
+      background: linear-gradient(135deg, #b4e4ed, #134A53);
+      color: #fff;
+      padding: 1rem 2rem;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+
+    .Eldoret {
+      font-weight: bold;
+      font-size: 1.8rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      cursor: pointer;
+      color: #fff;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+      margin: 0;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #b4e4ed;
+    }
+
+    .search-container {
+      background: white;
+      margin: 120px auto 30px;
+      padding: 20px;
+      max-width: 850px;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+
+    .search-form {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+    }
+
+    .form-group label {
+      font-weight: bold;
+      color: #134A53;
+      margin-bottom: 5px;
+      display: block;
+    }
+
+    .form-group input,
+    .form-group select {
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      width: 100%;
+    }
+
+    .search-btn {
+      background: #134A53;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+      width: 100%;
+    }
+
+    .search-btn:hover {
+      background: #0e6a7d;
+    }
+
+    .properties-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .property-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: 0.3s;
+    }
+
+    .property-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .property-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-bottom: 1px solid #eee;
+    }
+
+    .property-info {
+      padding: 15px;
+    }
+
+    .property-title {
+      font-weight: bold;
+      color: #134A53;
+      margin-bottom: 8px;
+    }
+
+    .property-price {
+      color: #c11d1d;
+      font-weight: bold;
+    }
+
+    .contact-btn {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  background: #2FBAD0;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 10px;
+  transition: 0.3s;
+  font-weight: 600;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-btn:hover {
+  background: #1f9ab0;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+    footer {
+      background: #134A53;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    #topBtn {
+      display: none;
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      font-size: 18px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      padding: 12px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      transition: 0.3s;
+    }
+
+    #topBtn:hover {
+      background: #00ccff;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div class="Eldoret">Eldoret Rentals</div>
+      <ul class="nav-links">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/properties.html">Properties</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="search-container">
+    <div class="search-form">
+      <div class="form-group">
+        <label>Search</label>
+        <input type="text" id="searchBar" placeholder="Type to search e.g. Annex, 2 Bedroom">
+      </div>
+      <div class="form-group">
+        <label>Location</label>
+        <select id="location">
+          <option>All Areas</option>
+          <option>CBD</option>
+          <option>Langas</option>
+          <option>Kapsoya</option>
+          <option>Annex</option>
+          <option>Racecourse</option>
+          <option > Huruma</option>
+          <option >Roadblock</option>
+          <option >Elgonview</option>
+          <option >Mwanzo</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Type</label>
+        <select id="type">
+          <option>All</option>
+          <option>Bedsitter</option>
+          <option>1 Bedroom</option>
+          <option>2 Bedroom</option>
+          <option>3 Bedroom</option>
+          <option >Mansion</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Max Price (KSH)</label>
+        <input type="number" id="price" placeholder="e.g. 10,000">
+      </div>
+      <div class="form-group">
+        <button class="search-btn" onclick="filterProperties()">Search</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="properties-grid" id="grid"></div>
+
+  <footer>
+    <p>&copy; 2025 Eldoret Rentals</p>
+  </footer>
+
+  <button id="topBtn" onclick="topFunction()">↑</button>
+
+  <script>
+    const properties = [
+      { title: "Modern Bedsitter", location: "CBD", price: 8000, image: "/Modern Living Room with Stylish Gray Palette.jpg" },
+      { title: "1 Bedroom Apartment", location: "Kimumu", price: 11000, image: "/ce244678-4a92-4e84-bdbc-c976b17ebf17.jpg" },
+      { title: "2 Bedroom House", location: "Kapsoya", price: 16000, image: "/My home.jpg" },
+      { title: "3 Bedroom Home", location: "Annex", price: 20000, image: "/2 Bedrooms In kileleshwa 52 k (MD11133051)….jpg" },
+      { title: "Studio Apartment", location: "Huruma", price: 3500, image: "/Decent Mabati House for rentals idea.jpg" },
+      { title: "Spacious 1 Bedroom", location: "Kapsoya", price: 30000, image: "/615dfc3b-cb04-44fc-8cd1-aab029624c98.jpg" },
+      { title: "Elegant 2 Bedroom", location: "Langas", price: 17000, image: "/Nairobi, Kenya.jpg" },
+      { title: "Family 3 Bedroom", location: "Annex", price: 22000, image: "/063565a5-8dc9-4761-9aeb-32f1e03675a7.jpg" },
+      { title: "Modern Cottage", location: "Racecourse", price: 19000, image: "/0b31017f-93ad-4d49-91de-6e770b2a06df.jpg" },
+      { title: "Serviced Apartment", location: "Maile nne", price: 25000, image: "/5dcacdcb-caed-4e10-88fc-e907c5bffe94.jpg"},
+    ];
+
+    function showProperties(list) {
+      const grid = document.getElementById('grid');
+      grid.innerHTML = "";
+      list.forEach(p => {
+        const div = document.createElement('div');
+        div.className = "property-card";
+        div.innerHTML = `
+          <img src="${p.image}" alt="${p.title}">
+          <div class="property-info">
+            <div class="property-title">${p.title}</div>
+            <div>${p.location}</div>
+            <div class="property-price">KSH ${p.price.toLocaleString()}</div>
+            <a href="/contact.html" class="contact-btn">Contact Owner</a>
+          </div>
+        `;
+        grid.appendChild(div);
+      });
+    }
+
+    function filterProperties() {
+      const searchText = document.getElementById('searchBar').value.toLowerCase();
+      const loc = document.getElementById('location').value;
+      const max = document.getElementById('price').value;
+      const filtered = properties.filter(p =>
+        (p.title.toLowerCase().includes(searchText) || p.location.toLowerCase().includes(searchText)) &&
+        (loc === "All Areas" || p.location === loc) &&
+        (!max || p.price <= max)
+      );
+      showProperties(filtered);
+    }
+
+    window.onscroll = function() {
+      document.getElementById('topBtn').style.display =
+        window.scrollY > 200 ? "block" : "none";
+    };
+
+    function topFunction() {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    showProperties(properties);
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore Eldoret Areas</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 40px 0;
+      background-color: aqua;
+
+    }
+    header {
+      background: linear-gradient(135deg, #b4e4ed, #134A53);
+      color: #fff;
+      padding: 1rem 2rem;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+
+    .Eldoret {
+      font-weight: bold;
+      font-size: 1.8rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      cursor: pointer;
+      color: #fff;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+      margin: 0;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #b4e4ed;
+    }
+    h2 {
+      color: #134A53;
+    }
+    .dropdown {
+      display: inline-block;
+      position: relative;
+    }
+    .dropbtn {
+      background-color: white;
+      color: #134A53;
+      padding: 10px 15px;
+      font-size: 16px;
+      border: 1px solid #134A53;
+      border-radius: 6px;
+      cursor: pointer;
+      width: 200px;
+      text-align: left;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color:rgba(0, 0, 0, 0.2) ;
+      min-width: 200px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+      border-radius: 6px;
+      text-align: left;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .dropdown-content a {
+      color: #134A53;
+      padding: 10px 15px;
+      text-decoration: none;
+      display: block;
+    }
+    .dropdown-content a:hover {
+      background-color: #f2f2f2;
+    }
+    
+  </style>
+</head>
+<body>
+     <header>
+    <nav>
+      <div class="Eldoret">Eldoret Rentals</div>
+      <ul class="nav-links">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/properties.html">Properties</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <h2>Select area in Eldoret</h2>
+
+  <div class="dropdown">
+    <button class="dropbtn">Select an Area</button>
+    <div class="dropdown-content">
+     <a href="https://maps.app.goo.gl/9EVhgTZTs9YmCznb9" target="_blank">CBD</a>
+      <a href="https://maps.app.goo.gl/xo8iwYafTtUb5dJd9" target="_blank">Langas</a>
+      <a href="https://www.google.com/maps/place/Kapsoya,+Eldoret" target="_blank">Kapsoya</a>
+      <a href="https://www.google.com/maps/place/Annex,+Eldoret" target="_blank">Annex</a>
+      <a href="https://www.google.com/maps/place/Racecourse,+Eldoret" target="_blank">Racecourse</a>
+      <a href="https://www.google.com/maps/place/Huruma,+Eldoret" target="_blank">Huruma</a>
+      <a href="https://www.google.com/maps/place/Roadblock,+Eldoret" target="_blank">Roadblock</a>
+      <a href="https://www.google.com/maps/place/Elgonview,+Eldoret" target="_blank">Elgonview</a>
+      <a href="https://www.google.com/maps/place/Mwanzo,+Eldoret" target="_blank">Mwanzo</a>
+    </div>
+  </div>
+
+</body>
+</html>
